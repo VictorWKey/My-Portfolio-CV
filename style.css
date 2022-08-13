@@ -1,15 +1,20 @@
+/* --------------HEADER CODE---------------- */
+
 :root{
     --ch: 1.2rem;
     --md: 1.4rem;
     --lg: 1.6rem;
+    --title-fontsize: 6rem;
+    --subtitle-fontsize: 3rem;
     --light-blue: #4ac1f7;
     --dark-blue: #091f2b;
-    --gray: #efefef
+    --background-section-color: rgb(245, 245, 245);
+    --background-project-color: rgb(255, 255, 255);
+    --gray: #efefef;
 }
 
 *{
-    font-family: 'Space Mono', monospace;
-    letter-spacing: -1px;
+    font-family: 'Rubik', sans-serif;
     scroll-behavior: smooth;
 }
 
@@ -51,8 +56,8 @@ nav{
     padding: 4px 24px;
     font-size: 1.6rem;
     font-weight: bold;
-    letter-spacing: 4px;
-    transition: all 0.5s;
+    letter-spacing: 2px;
+    transition: all 0.2s;
 }
 
 .option_container:hover > .option{
@@ -65,7 +70,7 @@ nav{
     height: 2px;
     background:transparent;
     text-align: center;
-    transition: all 0.5s;
+    transition: all 0.35s;
 }
 
 .option_container:hover > .hover_bar {
@@ -76,27 +81,28 @@ nav{
 
 
 .button{
-    padding: 10px;
-    border-radius: 10px;
+    border-radius: 5px;
     outline: none;
-    font-size: var(--lg);
-    color: var(--gray);
-    background: var(--dark-blue);
-    border: 2px solid var(--gray);
-    font-weight: bold;
-    letter-spacing: 2px;
-    transition: all 0.5s;
+    font-size: var(--lg);   
+    font-weight: 500;
+    transition: all 0.35s;
+    margin-right: 20px;
+    color: #fff;
+    border: none;
+    background: var(--light-blue);
+    padding: 12px 24px;
 }
 
 .button:hover{
-    border: 2px solid var(--light-blue);
-    color: var(--light-blue);
+    color: #fff;
+    background: #349bc9;
     cursor: pointer;
 }
 
-.button:hover{
-    border: 2px solid var(--light-blue);
-    color: var(--light-blue);
+.button:active{
+    color: #fff;
+    background: #4acbfe;
+    cursor: pointer;
 }
 
 .header{
@@ -147,6 +153,7 @@ nav{
 }
 
 .info_container div:last-child{
+    font-weight: 500;
     color: var(--gray);
     font-size: 2rem;
 }
@@ -175,10 +182,90 @@ section{
     border-bottom: 2px solid #000;
 }
 
-@keyframes hoverBarOptn {
-    0%{
-        width: 0;
-    }
-    
+/* --------------PORTFOLIO CODE---------------- */
+
+.portfolio{
+    padding: 0 40px 40px 40px;
+    height: auto;
+    font-weight: bold;
+    background: var(--background-section-color);
 }
+
+.section_title{
+    padding: 6px 0 6px 0;
+    color: var(--dark-blue);
+    border-bottom: 4px solid var(--dark-blue);
+    margin: 75px 0 75px 0;
+    font-size: var(--title-fontsize);
+}
+
+.projects_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.project{
+    display: flex;
+    padding: 42px;
+    background: #fefefe;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.1);
+    margin-bottom: 32px;
+    min-width: 750px;
+    max-width: 1000px;
+    height: auto;
+}
+
+.project_info{
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px 0 10px;
+    max-width: 475px;
+    justify-content: space-between;
+}
+
+.project_title{
+    color: var(--dark-blue);
+    font-size: var(--subtitle-fontsize);
+    margin-bottom: 16px;
+    font-weight: 500;
+}
+
+.project_description{
+    color: var(--dark-blue);
+    font-size: var(--lg);
+}
+
+.description_text{
+    font-weight: 300;
+    margin-bottom: 16px;
+}
+
+.logo{
+    width: 45px;
+    height: 45px;
+    padding-right: 10px;
+    margin-bottom: 24px;
+}
+
+.project_img{
+    width: 350px;
+    min-width: 300px;
+    margin: 0 10px 0 10px;
+}
+
+.project_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+
+
+
+
 
